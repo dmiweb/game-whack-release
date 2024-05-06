@@ -1,0 +1,61 @@
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap : 50px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.dead {
+  color: green;
+}
+
+.skipped {
+  color: red;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 120px);
+  grid-template-columns: repeat(4, 120px);
+  justify-content: center;
+  padding: 50px 0 100px;
+  cursor: url(sledgehammer.png) 30 90, default;
+}
+
+.container:active {
+  cursor: url(sledgehammer-active.png) 30 90, default;
+}
+
+.cell {
+  margin: 1px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-radius: 50%;
+  box-shadow: 0 0 5px grey;
+}
+
+.cell:active {
+  background-image: url(boom.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.goblin {
+  border-radius: 50%;
+  background-image: url("goblin.png");
+}
+
+.goblin:active {
+  box-shadow: 0 0 60px red;
+}
+
+.hidden-goblin {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
